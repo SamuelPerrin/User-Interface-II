@@ -1,3 +1,8 @@
+/* Fonts */
+/* font-family: 'Fredericka the Great', cursive; */
+/* font-family: 'Josefin Slab', serif; */
+/* font-family: 'Roboto', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Josefin+Slab&family=Roboto&display=swap');
 /* CSS Reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -18,4 +23,135 @@ border: 0;
 font-size: 100%;
 font: inherit;
 vertical-align: baseline;
+}
+header {
+  background:lightslategray;
+  height:25vh;
+  display:flex;
+  flex-flow: column nowrap;
+}
+header h1 {
+  color:black;
+  font-size:8vh;
+  font-family: 'Fredericka the Great', cursive;
+  text-shadow: .125vh .125vh #333333;
+  padding:2vw;
+}
+a {
+  text-decoration:none;
+}
+nav {
+  display:flex;
+  width: 50vw;
+  height: 5vh;
+  /* border: 1px solid black; */
+  flex-flow: row nowrap;
+  margin-left:5vw;
+  justify-content:flex-start;
+}
+nav a {
+  font-family: Roboto, sans-serif;
+  padding:1.25vw;
+  margin:0;
+  border:.125vh solid black;
+  box-sizing:border-box;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  font-size:2.4vh;
+}
+nav a:hover {
+  background:#e3553f;
+}
+main section.main {
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content:flex-start;
+}
+main section .hero {
+  background:url(https://picsum.photos/750/450?random=1) no-repeat;
+  width:40vw;
+  height:45vh;
+  margin:2vw;
+  /* border:1px solid black; */
+}
+main section .text {
+  /* border:1px solid black; */
+  width:30vw;
+  height:45vh;
+  display:flex;
+  margin:2vw;
+  flex-flow: column nowrap;
+  justify-content:flex-end;
+  align-items: flex-start;
+}
+.text h2 {
+  color:black;
+  font-size:4.8vh;
+  font-family: 'Josefin Slab', serif;
+  padding:2vh;
+}
+.text a {
+  background:#e3553f;
+  color:white;
+  font-family:Roboto, sans-serif;
+  width:6vw;
+  font-size:2vh;
+  padding:2vh;
+  margin:1vw;
+  text-align:center;
+}
+.text a:hover{
+  background:white;
+  color:#e3553f;
+  border: 1px solid black;
+}
+.text p {
+  padding:2vw;
+  font-family:Roboto, sans-serif;
+  font-size:2vh;
+}
+main section.gallery {
+  /* border:1px solid black; */
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:space-around;
+}
+.gallery .project {
+  /* border:1px solid black; */
+  width:400px;
+  height:335px;
+  display:flex;
+  align-items:center;
+  flex-flow:column nowrap;
+  font-family:Roboto, sans-serif;
+  font-size:2vh;
+}
+footer {
+  background:lightslategray;
+  height:20vh;
+  display:flex;
+  flex-flow:column nowrap;
+  align-items:center;
+  justify-content:space-evenly;
+}
+footer p{
+  font-family: 'Josefin Slab', serif;
+  font-size:4vh;
+}
+footer a{
+  background:#e3553f;
+  color:white;
+  font-family:Roboto, sans-serif;
+  width:6vw;
+  font-size:2vh;
+  padding:2vh;
+  margin:1vw;
+  text-align:center;
+}
+footer a:hover{
+  background:white;
+  color:#e3553f;
+  border: 1px solid black;
 }
