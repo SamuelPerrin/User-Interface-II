@@ -3,6 +3,16 @@
 /* font-family: 'Josefin Slab', serif; */
 /* font-family: 'Roboto', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Josefin+Slab&family=Roboto&display=swap');
+
+/* Variables */
+:root {
+  --primaryColor: lightslategray;
+  --accentColor: #e3553f;
+  --titleFont:'Fredericka the Great', cursive;
+  --accentFont:'Josefin Slab', serif;
+  --bodyFont:'Roboto', sans-serif;
+}
+
 /* CSS Reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -25,7 +35,7 @@ font: inherit;
 vertical-align: baseline;
 }
 header {
-  background:lightslategray;
+  background:var(--primaryColor);
   height:25vh;
   display:flex;
   flex-flow: column nowrap;
@@ -33,7 +43,7 @@ header {
 header h1 {
   color:black;
   font-size:8vh;
-  font-family: 'Fredericka the Great', cursive;
+  font-family: var(--titleFont);
   text-shadow: .125vh .125vh #333333;
   padding:2vw;
 }
@@ -50,7 +60,7 @@ nav {
   justify-content:flex-start;
 }
 nav a {
-  font-family: Roboto, sans-serif;
+  font-family: var(--bodyFont);
   padding:1.25vw;
   margin:0;
   border:.125vh solid black;
@@ -62,7 +72,7 @@ nav a {
   font-size:2.4vh;
 }
 nav a:hover {
-  background:#e3553f;
+  background:var(--accentColor);
 }
 main section.main {
   display:flex;
@@ -74,11 +84,9 @@ main section .hero {
   width:40vw;
   height:45vh;
   margin:2vw;
-  /* border:1px solid black; */
 }
 main section .text {
-  /* border:1px solid black; */
-  width:30vw;
+  width:50vw;
   height:45vh;
   display:flex;
   margin:2vw;
@@ -89,14 +97,14 @@ main section .text {
 .text h2 {
   color:black;
   font-size:4.8vh;
-  font-family: 'Josefin Slab', serif;
+  font-family: var(--accentFont);
   padding:2vh;
 }
 .text a {
-  background:#e3553f;
+  background:var(--accentColor);
   color:white;
-  font-family:Roboto, sans-serif;
-  width:6vw;
+  font-family:var(--bodyFont);
+  /* width:6vw; */
   font-size:2vh;
   padding:2vh;
   margin:1vw;
@@ -104,32 +112,36 @@ main section .text {
 }
 .text a:hover{
   background:white;
-  color:#e3553f;
+  color:var(--accentColor);
   border: 1px solid black;
 }
 .text p {
   padding:2vw;
-  font-family:Roboto, sans-serif;
+  font-family:var(--bodyFont);
   font-size:2vh;
 }
 main section.gallery {
-  /* border:1px solid black; */
   display:flex;
   flex-flow:row wrap;
   justify-content:space-around;
 }
 .gallery .project {
-  /* border:1px solid black; */
   width:400px;
   height:335px;
   display:flex;
   align-items:center;
   flex-flow:column nowrap;
-  font-family:Roboto, sans-serif;
+  font-family:var(--bodyFont);
   font-size:2vh;
 }
+.gallery .project img {
+  border-radius: 5px;
+}
+.gallery .project:hover {
+  opacity:92%;
+}
 footer {
-  background:lightslategray;
+  background:var(--primaryColor);
   height:20vh;
   display:flex;
   flex-flow:column nowrap;
@@ -137,21 +149,39 @@ footer {
   justify-content:space-evenly;
 }
 footer p{
-  font-family: 'Josefin Slab', serif;
+  font-family: var(--accentFont);
   font-size:4vh;
-}
-footer a{
-  background:#e3553f;
   color:white;
-  font-family:Roboto, sans-serif;
-  width:6vw;
+}
+footer a.contact-btn{
+  background:var(--accentColor);
+  color:white;
+  font-family:var(--bodyFont);
+  /* width:6vw; */
   font-size:2vh;
   padding:2vh;
   margin:1vw;
   text-align:center;
 }
-footer a:hover{
+footer a.contact-btn:hover{
   background:white;
-  color:#e3553f;
+  color:var(--accentColor);
   border: 1px solid black;
+}
+footer .socials {
+  display: flex;
+  width:20vw;
+  justify-content:space-evenly;
+}
+footer .socials a {
+  color:white;
+  font-family:var(--bodyFont);
+  margin:4px;
+}
+footer .socials a:hover {
+  color:black;
+}
+h2.about, h2.contact, h2.projects {
+  font-family:var(--bodyFont);
+  font-size:3vh;
 }
