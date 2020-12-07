@@ -34,6 +34,8 @@ font-size: 100%;
 font: inherit;
 vertical-align: baseline;
 }
+
+/* header styles */
 header {
   background:var(--primaryColor);
   height:25vh;
@@ -74,6 +76,8 @@ nav a {
 nav a:hover {
   background:var(--accentColor);
 }
+
+/* main section styles */
 main section.main {
   display:flex;
   flex-flow: row nowrap;
@@ -120,6 +124,8 @@ main section .text {
   font-family:var(--bodyFont);
   font-size:2vh;
 }
+
+/* gallery section styles */
 main section.gallery {
   display:flex;
   flex-flow:row wrap;
@@ -140,6 +146,8 @@ main section.gallery {
 .gallery .project:hover {
   opacity:92%;
 }
+
+/* footer styles */
 footer {
   background:var(--primaryColor);
   height:20vh;
@@ -185,3 +193,8 @@ h2.about, h2.contact, h2.projects {
   font-family:var(--bodyFont);
   font-size:3vh;
 }
+
+/* tablet */
+
+
+/* mobile */
