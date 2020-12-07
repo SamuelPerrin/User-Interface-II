@@ -8,6 +8,7 @@
 :root {
   --primaryColor: lightslategray;
   --accentColor: #e3553f;
+  --fontColor: #4F4F4F;
   --titleFont:'Fredericka the Great', cursive;
   --accentFont:'Josefin Slab', serif;
   --bodyFont:'Roboto', sans-serif;
@@ -35,43 +36,61 @@ font: inherit;
 vertical-align: baseline;
 }
 
+/*General Styles*/
+* {
+  box-sizing:border-box;
+  max-width:100%;
+}
+html{
+    font-size:62.5%;
+}
+body{
+    font-size:1.6rem;
+    line-height:1.5;
+    font-family: 'Roboto Mono', monospace;
+    color:var(--fontColor);
+}
+h1{
+    font-family: var(--titleFont);
+    font-size:7rem;
+}
+span{
+    font-weight:bold;
+}
+a{
+    text-decoration:none;
+    color:white;
+}
+section{
+    padding:2% 0;
+}
+
 /* header styles */
 header {
-  background:var(--primaryColor);
-  height:25vh;
-  display:flex;
-  flex-flow: column nowrap;
+  background-color:var(--primaryColor);
+  width:100%;
 }
 header h1 {
   color:black;
-  font-size:8vh;
-  font-family: var(--titleFont);
   text-shadow: .125vh .125vh #333333;
-  padding:2vw;
-}
-a {
-  text-decoration:none;
+  margin:1%;
 }
 nav {
   display:flex;
-  width: 50vw;
-  height: 5vh;
-  /* border: 1px solid black; */
   flex-flow: row nowrap;
-  margin-left:5vw;
+  margin:0 4%;
   justify-content:flex-start;
 }
 nav a {
   font-family: var(--bodyFont);
-  padding:1.25vw;
-  margin:0;
-  border:.125vh solid black;
+  padding:1%;
+  border:1px solid black;
   box-sizing:border-box;
   display:flex;
   justify-content:center;
   align-items:center;
   color:white;
-  font-size:2.4vh;
+  font-size:2rem;
 }
 nav a:hover {
   background:var(--accentColor);
@@ -84,34 +103,32 @@ main section.main {
   justify-content:flex-start;
 }
 main section .hero {
-  background:url(https://picsum.photos/750/450?random=1) no-repeat;
-  width:40vw;
-  height:45vh;
-  margin:2vw;
+  width:40%;
+  margin:2%;
 }
 main section .text {
   width:50vw;
   height:45vh;
   display:flex;
-  margin:2vw;
+  margin:1%;
   flex-flow: column nowrap;
   justify-content:flex-end;
   align-items: flex-start;
 }
 .text h2 {
   color:black;
-  font-size:4.8vh;
+  font-size:5rem;
   font-family: var(--accentFont);
-  padding:2vh;
+  padding:1%;
 }
 .text a {
   background:var(--accentColor);
   color:white;
   font-family:var(--bodyFont);
   /* width:6vw; */
-  font-size:2vh;
-  padding:2vh;
-  margin:1vw;
+  font-size:1.8rem;
+  padding:2%;
+  margin:1%;
   text-align:center;
 }
 .text a:hover{
@@ -122,35 +139,36 @@ main section .text {
 .text p {
   padding:2vw;
   font-family:var(--bodyFont);
-  font-size:2vh;
+  font-size:1.8rem;
 }
 
 /* gallery section styles */
 main section.gallery {
   display:flex;
   flex-flow:row wrap;
-  justify-content:space-around;
+  justify-content:center;
 }
 .gallery .project {
   width:400px;
-  height:335px;
   display:flex;
   align-items:center;
   flex-flow:column nowrap;
   font-family:var(--bodyFont);
-  font-size:2vh;
+  font-size:2rem;
+  padding:2%;
 }
 .gallery .project img {
   border-radius: 5px;
 }
-.gallery .project:hover {
+.gallery .project img:hover {
   opacity:92%;
+  border:1px solid black;
 }
 
 /* footer styles */
 footer {
   background:var(--primaryColor);
-  height:20vh;
+  width:100%;
   display:flex;
   flex-flow:column nowrap;
   align-items:center;
@@ -158,17 +176,17 @@ footer {
 }
 footer p{
   font-family: var(--accentFont);
-  font-size:4vh;
+  font-size:2.5rem;
   color:white;
+  margin:1% 0;
 }
 footer a.contact-btn{
   background:var(--accentColor);
   color:white;
   font-family:var(--bodyFont);
-  /* width:6vw; */
-  font-size:2vh;
-  padding:2vh;
-  margin:1vw;
+  font-size:2rem;
+  padding:1%;
+  /* margin:1% 0; */
   text-align:center;
 }
 footer a.contact-btn:hover{
@@ -178,20 +196,21 @@ footer a.contact-btn:hover{
 }
 footer .socials {
   display: flex;
-  width:20vw;
+  width:40%;
+  margin:1%;
   justify-content:space-evenly;
 }
 footer .socials a {
   color:white;
   font-family:var(--bodyFont);
-  margin:4px;
+  margin:1%;
 }
 footer .socials a:hover {
   color:black;
 }
 h2.about, h2.contact, h2.projects {
   font-family:var(--bodyFont);
-  font-size:3vh;
+  font-size:3rem;
 }
 
 /* tablet */
