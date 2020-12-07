@@ -225,5 +225,37 @@ h2.about, h2.contact, h2.projects {
 
 /* mobile */
 @media (max-width:500px) {
-
+  h1 {
+    font-size:5rem;
+    text-align:center;
+  }
+  nav {
+    width:100%;
+    justify-content:space-evenly;
+    margin:0;
+  }
+  nav a{
+    padding:0 2%;
+  }
+  main section.main {
+    flex-direction:column;
+  }
+  .main .hero {
+    width:90%;
+  }
+  .main .text {
+    width:80%;
+    align-items:center;
+    text-align:center;
+  }
+  .text h2 {
+    font-size:4.5rem;
+  }
+  .gallery {
+    flex-direction:column;
+  }
+  footer .socials {
+    width:80%;
+    justify-content:space-evenly;
+  }
 }
